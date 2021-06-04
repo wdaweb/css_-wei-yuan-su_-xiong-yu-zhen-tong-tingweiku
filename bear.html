@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: '微軟正黑體';
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background: #000;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .ear::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 18px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+        }
+
+        .ear::after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 18px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+        }
+
+        .eyes::before {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #000;
+            border: 18px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+        }
+
+        .eyes::after {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #000;
+            border: 18px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px;
+            right: 90px;
+        }
+
+        .blush::before {
+            content: '';
+            width: 130px;
+            height: 130px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+        }
+
+        .blush::after {
+            content: '';
+            width: 130px;
+            height: 130px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+        }
+
+        .nose::before {
+            content: '';
+            width: 220px;
+            height: 150px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nose::after {
+            content: '';
+            width: 60px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 215px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .mouth::before {
+            content: '';
+            width: 140px;
+            height: 55px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 275px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .chest::before {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            transform: skew(50deg, 0);
+            position: absolute;
+            top: 390px;
+            left: 173px;
+        }
+
+        .chest::after {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            transform: skew(-50deg, 0);
+            position: absolute;
+            top: 390px;
+            right: 173px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ear"></div>
+        <div class="eyes"></div>
+        <div class="blush"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        <div class="chest"></div>
+    </div>
+</body>
+
+</html>

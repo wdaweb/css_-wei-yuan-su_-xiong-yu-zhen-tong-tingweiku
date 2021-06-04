@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: '微軟正黑體';
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 602px;
+            height: 150px;
+            background: linear-gradient(#fff 20%, #9D9D9D 70%, #fff 100%);
+            border: 1px solid #ADADAD;
+            position: relative;
+        }
+
+        .black::before {
+            content: '';
+            width: 270px;
+            height: 100%;
+            background: linear-gradient(#fff 20%, #E0E0E0 70%, #fff 100%);
+            position: absolute;
+            left: -270px;
+        }
+
+        .black {
+            width: 60px;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .black::after {
+            content: '';
+            width: 270px;
+            height: 100%;
+            background: rgba(255, 255, 170, 0.6);
+            position: absolute;
+            right: -270px;
+        }
+
+        .scale {
+            width: 1px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .scale::before {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background: #ADADAD;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .black-2 {
+            content: '';
+            width: 60px;
+            height: 150px;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 270px;
+        }
+
+        .beside-1::before {
+            content: '';
+            width: 60px;
+            height: 90px;
+            border: 1px solid #ADADAD;
+            background: linear-gradient(#fff 20%, #E0E0E0 80%, #fff 100%);
+            border-radius: 5%;
+            position: absolute;
+            top: 50%;
+            left: -62px;
+            transform: translateY(-50%);
+        }
+
+        .beside-2::before {
+            content: '';
+            width: 55px;
+            height: 140px;
+            border: 1px solid #ADADAD;
+            background: linear-gradient(#fff 20%, #E0E0E0 70%, #fff 100%);
+            border-radius: 8%;
+            position: absolute;
+            top: 50%;
+            left: -119px;
+            transform: translateY(-50%);
+        }
+
+        .beside-1::after {
+            content: '';
+            width: 60px;
+            height: 90px;
+            border: 1px solid #ADADAD;
+            background: linear-gradient(#fff 20%, #E0E0E0 80%, #fff 100%);
+            border-radius: 5%;
+            position: absolute;
+            top: 50%;
+            right: -62px;
+            transform: translateY(-50%);
+        }
+
+        .beside-2::after {
+            content: '';
+            width: 130px;
+            height: 2px;
+            background: #7B7B7B;
+            position: absolute;
+            top: 50%;
+            right: -192px;
+            transform: translateY(-50%);
+        }
+
+        .text {
+            font-size: 20px;
+            color: #ADADAD;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="black"></div>
+        <div class="scale"></div>
+        <div class="black-2"></div>
+        <div class="beside-1"></div>
+        <div class="beside-2"></div>
+        <div class="text">Made In Taiwan</div>
+    </div>
+    <script>
+        const scale = document.querySelector('.scale')
+
+        for (let i = 0; i < 30; i++) {
+            scale.insertAdjacentHTML('afterend', `<div class="scale" style="left:${i * 20}px"><div>`)
+        }
+    </script>
+</body>
+
+</html>
